@@ -243,10 +243,6 @@
     <string name="bajasur">Bajasur83</string>
     <string name="bajasur_sum">Misc Tweaks</string>
 
-
-    <!-- Extras Frag strings -->
-    <!-- ...may delete this fragment entirely... not really needed... -->
-
     <!-- BuildProp edit strings -->
     <string name="buildproptitle">Build.prop editor</string>
     <string name="buildpropsummary">Click to open build.prop editor</string>
@@ -258,7 +254,41 @@
     <string name="editprop_delete_item_title">Delete Item</string>
     <string name="editprop_delete_item_message">Would you like to delete this property?</string>
 
-    <!-- Frag-specific strings... eventually -->
+    <!-- RecentApps fragment strings -->
+    <string name="recent_app_title">Recent apps</string>
+    <string name="recents_longpress_title">Recents longpress</string>
+    <string name="recents_longpress_summary">Enable recents longpress to go to last open app</string>
+    <string name="show_clear_all_recents_button_title">Clear all button</string>
+    <string name="show_clear_all_recents_button_summary">Show clear all button</string>
+    <string name="recents_clear_all_location_title">Clear all location</string>
+    <string name="recents_clear_all_location_top_right">Top right</string>
+    <string name="recents_clear_all_location_top_left">Top left</string>
+    <string name="recents_clear_all_location_top_center">Top center</string>
+    <string name="recents_clear_all_location_bottom_right">Bottom right</string>
+    <string name="recents_clear_all_location_bottom_left">Bottom left</string>
+    <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+    <string name="recents_searchbar_title">Search bar</string>
+    <string name="recents_searchbar_summary">Show Google search bar in the recents screen</string>
+    <string name="recents_clear_all_dismiss_all_title">Clear all tasks</string>
+    <string name="recents_clear_all_dismiss_all_summary">Include foreground task when clearing all</string>
+    <string-array name="recents_clear_all_location_entries">
+        <item>@string/recents_clear_all_location_top_right</item>
+        <item>@string/recents_clear_all_location_top_left</item>
+        <item>@string/recents_clear_all_location_top_center</item>
+        <item>@string/recents_clear_all_location_bottom_right</item>
+        <item>@string/recents_clear_all_location_bottom_left</item>
+        <item>@string/recents_clear_all_location_bottom_center</item>
+    </string-array>
+    <string-array name="recents_clear_all_location_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- More frag-specific strings... eventually -->
 
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
