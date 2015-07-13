@@ -52,12 +52,11 @@ public class SecureSettingSwitchPreference extends SwitchPreference {
         if (!shouldPersist()) {
             return defaultReturnValue;
         }
-        return Settings.Secure.getInt(getContext().getContentResolver(),
-                getKey(), defaultReturnValue ? 1 : 0) != 0;
+        return Settings.Secure.getInt(getContext().getContentResolver(), getKey(), defaultReturnValue ? 1 : 0) != 0;
     }
 
     @Override
-    public boolean isPersistent() {
+    public boolean isPersisted() {
         // Using getString instead of getInt so we can simply check for null
         // instead of catching an exception. (All values are stored as strings.)
         return Settings.Secure.getString(getContext().getContentResolver(), getKey()) != null;

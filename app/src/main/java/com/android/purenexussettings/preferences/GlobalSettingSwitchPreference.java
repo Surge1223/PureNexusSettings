@@ -57,7 +57,7 @@ public class GlobalSettingSwitchPreference extends SwitchPreference {
     }
 
     @Override
-    public boolean isPersistent() {
+    public boolean isPersisted() {
         // Using getString instead of getInt so we can simply check for null
         // instead of catching an exception. (All values are stored as strings.)
         return Settings.Global.getString(getContext().getContentResolver(), getKey()) != null;
