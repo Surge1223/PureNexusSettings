@@ -30,14 +30,15 @@
         <ImageView
             android:id="@android:id/icon"
             android:layout_width="24dp"
-            android:layout_height="24dp"/>
+            android:layout_height="24dp"
+            android:contentDescription="@string/desc_list_item_icon"/>
 
         <TextView
             android:id="@android:id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textAppearance="@android:style/TextAppearance.Material.Body1"
+            android:textColor="@color/bg_mat_dark"
             android:gravity="center_horizontal"/>
 
     </LinearLayout>
