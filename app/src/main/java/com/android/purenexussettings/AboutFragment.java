@@ -123,7 +123,6 @@ public class AboutFragment extends Fragment {
             public void onClick(View v) {
                 if (popUpInfo == null || !popUpInfo.isShowing()) {
                     getStartDialog();
-                   // getStartDialog().show();
                     logo.setClickable(true);
                 }
             }
