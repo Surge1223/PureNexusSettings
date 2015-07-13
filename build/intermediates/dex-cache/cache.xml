@@ -2,6 +2,62 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-16220f0daeeb0db0c1f557d4c6deb754eb140b67.jar" />
+    </item>
+    <item
+        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\support-v13\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="79a5b6d9fbab3b5fb4c6f86a1ed7a17722fd937b">
+        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\internal_impl-22.2.0-67cf53162b47618e7e5c8902473142ab06ce7f36.jar" />
+    </item>
+    <item
+        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\internal_impl-22.2.0-a562b9f2172a74a2d2994f97dcb5dc491d9680ae.jar" />
+    </item>
+    <item
+        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\eu.chainfire\libsuperuser\1.0.0.201504231659\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="930158334c20042becc855691f130f12b9a5ea47">
+        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-35d30f1acf5f8700eca2fdb56f4e24ba426bdb2b.jar" />
+    </item>
+    <item
+        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\support-v13\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9aa93835393824b436f366120c9ba8a0260ce75d">
+        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-8f397ab14cf4d42688b6c49d82cc466a96f1ae7f.jar" />
+    </item>
+    <item
+        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-532132d0a82dd3bcab5e1381a9280fa58983081b.jar" />
+    </item>
+    <item
+        jar="C:\android\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\support-annotations-22.2.0-a81aa28d89a6aabc047a7c8ba4296a198bb4bc75.jar" />
+    </item>
+    <item
+        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-4cc9cc7d3390db2b7b0edfa4a80fccc9b2353e20.jar" />
+    </item>
+    <item
         jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -14,62 +70,6 @@
         revision="22.0.1"
         sha1="97f7e239e86ef994de894818fdd8a71d2e89d6aa">
         <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-ab75b04eb69c61567a665029da33206fbf8124e7.jar" />
-    </item>
-    <item
-        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\support-v13\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9aa93835393824b436f366120c9ba8a0260ce75d">
-        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-8f397ab14cf4d42688b6c49d82cc466a96f1ae7f.jar" />
-    </item>
-    <item
-        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\internal_impl-22.2.0-a562b9f2172a74a2d2994f97dcb5dc491d9680ae.jar" />
-    </item>
-    <item
-        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\support-v13\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="79a5b6d9fbab3b5fb4c6f86a1ed7a17722fd937b">
-        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\internal_impl-22.2.0-67cf53162b47618e7e5c8902473142ab06ce7f36.jar" />
-    </item>
-    <item
-        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-4cc9cc7d3390db2b7b0edfa4a80fccc9b2353e20.jar" />
-    </item>
-    <item
-        jar="C:\android\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\support-annotations-22.2.0-a81aa28d89a6aabc047a7c8ba4296a198bb4bc75.jar" />
-    </item>
-    <item
-        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-16220f0daeeb0db0c1f557d4c6deb754eb140b67.jar" />
-    </item>
-    <item
-        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\eu.chainfire\libsuperuser\1.0.0.201504231659\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="930158334c20042becc855691f130f12b9a5ea47">
-        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-35d30f1acf5f8700eca2fdb56f4e24ba426bdb2b.jar" />
-    </item>
-    <item
-        jar="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
-        <dex dex="C:\Users\devonwitherell\Desktop\PureNexusSettings\app\build\intermediates\pre-dexed\release\classes-532132d0a82dd3bcab5e1381a9280fa58983081b.jar" />
     </item>
 
 </items>
