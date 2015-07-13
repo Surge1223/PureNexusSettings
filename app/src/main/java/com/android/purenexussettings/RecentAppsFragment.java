@@ -36,8 +36,8 @@ public class RecentAppsFragment extends PreferenceFragment implements OnPreferen
     private ListPreference mRecentsClearAllLocation;
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.recentapps_fragment);
         ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen prefSet = getPreferenceScreen();
