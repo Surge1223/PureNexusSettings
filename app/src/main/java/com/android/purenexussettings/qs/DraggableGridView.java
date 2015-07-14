@@ -19,6 +19,7 @@ package com.android.purenexussettings.qs;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Point;
@@ -56,6 +57,7 @@ public class DraggableGridView extends ViewGroup implements
     private boolean mUseLargerFirstRow = false;
 
     protected Runnable mUpdateTask = new Runnable() {
+        @SuppressLint("WrongCall")
         public void run() {
             if (mDragged != -1) {
                 if (mLastY < mPadding * 3 && mScroll > 0) {
@@ -71,7 +73,7 @@ public class DraggableGridView extends ViewGroup implements
                 }
             }
             clampScroll();
-            layout(getLeft(), getTop(), getRight(), getBottom());
+            onLayout(true, getLeft(), getTop(), getRight(), getBottom());
             mHandler.postDelayed(this, 25);
         }
     };
@@ -332,6 +334,7 @@ public class DraggableGridView extends ViewGroup implements
     }
 
     @Override
+    @SuppressLint("WrongCall")
     public boolean onTouch(View view, MotionEvent event) {
         int action = event.getAction();
         switch (action & MotionEvent.ACTION_MASK) {
@@ -368,7 +371,7 @@ public class DraggableGridView extends ViewGroup implements
                     if (Math.abs(delta) > 2) {
                         mEnabled = false;
                     }
-                    layout(getLeft(), getTop(), getRight(), getBottom());
+                    onLayout(true, getLeft(), getTop(), getRight(), getBottom());
                 }
                 mLastX = (int) event.getX();
                 mLastY = (int) event.getY();
@@ -490,6 +493,7 @@ public class DraggableGridView extends ViewGroup implements
         float lastY;
     }
 
+    @SuppressLint("WrongCall")
     protected void reorderChildren(int dragged, List<Animator> animators) {
         final ArrayList<ChildReorderInfo> children = new ArrayList<ChildReorderInfo>();
 
@@ -524,7 +528,7 @@ public class DraggableGridView extends ViewGroup implements
             mNewPositions.set(i, -1);
             addView(children.get(i).view);
         }
-        layout(getLeft(), getTop(), getRight(), getBottom());
+        onLayout(true, getLeft(), getTop(), getRight(), getBottom());
 
         for (int i = 0; i < children.size(); i++) {
             ChildReorderInfo info = children.get(i);
