@@ -38,6 +38,7 @@
         <item>EditProp</item>
         <item>AppPicker</item>
         <item>Select and order tiles</item>
+        <item>Extra info and tools</item>
         <item>Navigation bar</item>
         <item>Notification drawer</item>
         <item>Power Menu</item>
@@ -72,6 +73,7 @@
         <item>EditPropFragment</item>
         <item>AppPickerFragment</item>
         <item>qs.QSTiles</item>
+        <item>DeviceFragment</item>
         <item>NavigationBarFragment</item>
         <item>NotificationDrawerFragment</item>
         <item>PowerMenuFragment</item>
@@ -85,6 +87,7 @@
     <!-- Nav Drawer List Item Icons -->
     <!-- Keep them in order as the titles are in -->
     <array name="nav_drawer_icons">
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -257,6 +260,18 @@
     <string name="editprop_delete_item_title">Delete Item</string>
     <string name="editprop_delete_item_message">Would you like to delete this property?</string>
 
+    <!-- Device Frag strings -->
+    <string name="device_info_title">Device info</string>
+    <string name="device_summ">Get general info about your device</string>
+    <string name="title_battery_history">Battery history</string>
+    <string name="summary_battery_history">Summary of how battery has been used</string>
+    <string name="title_battery_information">Battery information</string>
+    <string name="summary_battery_information">Current battery status information</string>
+    <string name="title_usage_statistics">Usage statistics</string>
+    <string name="summary_usage_statistics">Summary of application usage</string>
+    <string name="wifi_title">WiFi information</string>
+    <string name="wifi_summary">Various bits of WiFi relevant information</string>
+
     <!-- RecentApps fragment strings -->
     <string name="recent_app_title">Recent apps</string>
     <string name="recents_longpress_title">Recents longpress</string>
@@ -398,4 +413,3 @@
 &#160; &#8226; Those not mentioned but should have been<br />]]></string>
 
 </resources>
-
