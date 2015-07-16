@@ -16,18 +16,68 @@
 
 package com.android.purenexussettings;
 
+import android.content.ContentResolver;
 import android.os.Bundle;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceScreen;
+import android.provider.Settings;
 
+public class VolumeRockerFragment extends PreferenceFragment implements OnPreferenceChangeListener {
+    private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+    public static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
 
-public class VolumeRockerFragment extends PreferenceFragment {
-    public VolumeRockerFragment(){}
+    private ListPreference mVolumeKeyCursorControl;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        addPreferencesFromResource(R.xml.volrock_fragment);
 
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.dummypref);
+        final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        //boolean hasRocker = getResources().getBoolean(R.bool.has_volume_rocker);
+        boolean hasRocker = true;
+
+        if (hasRocker) {
+            int cursorControlAction = Settings.System.getInt(resolver, VOLUME_KEY_CURSOR_CONTROL, 0);
+            mVolumeKeyCursorControl = initActionList(KEY_VOLUME_KEY_CURSOR_CONTROL, cursorControlAction);
+        } else {
+            prefScreen.removePreference(mVolumeKeyCursorControl);
+        }
+    }
+
+    public VolumeRockerFragment() {}
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    private ListPreference initActionList(String key, int value) {
+        ListPreference list = (ListPreference) getPreferenceScreen().findPreference(key);
+        list.setValue(Integer.toString(value));
+        list.setSummary(list.getEntry());
+        list.setOnPreferenceChangeListener(this);
+        return list;
+    }
+
+    private void handleActionListChange(ListPreference pref, Object newValue, String setting) {
+        String value = (String) newValue;
+        int index = pref.findIndexOfValue(value);
+        pref.setSummary(pref.getEntries()[index]);
+        Settings.System.putInt(getActivity().getContentResolver(), setting, Integer.valueOf(value));
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mVolumeKeyCursorControl) {
+            handleActionListChange(mVolumeKeyCursorControl, newValue, VOLUME_KEY_CURSOR_CONTROL);
+            return true;
+        }
+        return false;
     }
 }
