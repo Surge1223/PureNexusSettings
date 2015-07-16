@@ -34,7 +34,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.provider.Settings;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -71,7 +70,7 @@ public class TinkerActivity extends AppCompatActivity {
     public static final String EXTRA_START_FRAGMENT = "com.android.purenexussettings.tinkerings.EXTRA_START_FRAGMENT";
     public static final int REQUEST_CREATE_SHORTCUT = 3;
     // this allows first # entries in stringarray to be skipped from navdrawer/widget
-    public static int FRAG_ARRAY_START = 8;
+    public static int FRAG_ARRAY_START = 9;
 
     public static final String KEY_LOCK_CLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
@@ -358,9 +357,9 @@ public class TinkerActivity extends AppCompatActivity {
             launchcLock();
         }
 
-        // list out positions that should not be included in backstack
+        // list out positions that should skip stack clearing
         // editprop apppicker qstile navbar navbardimen
-        boolean mIgnoreStack = position == 2 || position == 3 || position == 4 || position == 6 || position == 7;
+        boolean mKeepStack = position == 2 || position == 3 || position == 4 || position == 6 || position == 7 || position == 8;
 
         // update the main content by replacing fragments
         Fragment frags = null;
@@ -380,9 +379,15 @@ public class TinkerActivity extends AppCompatActivity {
                 fragtrans.setCustomAnimations(R.anim.fadein, R.anim.fadeout, R.anim.fadein, R.anim.fadeout);
             }
             fragtrans.add(R.id.frame_container, frags);
+            // The backstack should be cleared if not coming from a fragment flagged as stack keeping or from a backpress
+            // After clearing the only entry should be About/main
+            if (!mKeepStack && !mBackPress) {
+                fragmentStack.clear();
+                fragmentStack.push(navMenuFrags[0]);
+            }
             // add fragment name to custom stack for backstack tracking
-            // only do it if not a backpress, flagged to ignore, or dup of last entry
-            if (!mBackPress && !mIgnoreStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
+            // only do it if not a backpress, flagged as stack keeping, or dup of last entry
+            if (!mBackPress && !mKeepStack && !(fragmentStack.size() >= 1 && fragmentStack.peek().equals(navMenuFrags[position]))) {
                 fragmentStack.push(navMenuFrags[position]);
             }
             fragtrans.commit();
@@ -534,6 +539,19 @@ public class TinkerActivity extends AppCompatActivity {
         }, 400);
     }
 
+    public void displayStatusClock() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        // below replicates the visual delay seen when launching frags from navdrawer
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayView(8);
+            }
+        }, 400);
+    }
+
     public void launchAppOps() {
         Intent link = new Intent("android.settings.APP_OPS_SETTINGS");
         startActivity(link);
@@ -548,22 +566,22 @@ public class TinkerActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        // list out positions that were not included in backstack
+        // list out positions that were flagged as stack keeping and not included in backstack
         // editprop apppicker qstile navbar navbardimen
-        boolean mIgnoreStack = mItemPosition == 2 || mItemPosition == 3 || mItemPosition == 4 || mItemPosition == 6 || mItemPosition == 7;
+        boolean mKeepStack = mItemPosition == 2 || mItemPosition == 3 || mItemPosition == 4 || mItemPosition == 6 || mItemPosition == 7 || mItemPosition == 8;
 
         if (!fullyClosed) {
             // backpress closes drawer if open
             mDrawerLayout.closeDrawer(mDrawerList);
-        } else if (fragmentStack.size() > 1 || mIgnoreStack) {
+        } else if (fragmentStack.size() > 1 || mKeepStack) {
             if (!mIgnoreBack) {
                 mIgnoreBack = true;
 
                 // cancels any pending postdelays just in case
                 myHandler.removeCallbacksAndMessages(null);
 
-                // removes latest (current) entry in custom stack
-                if (!mIgnoreStack) {
+                // removes latest (current) entry in custom stack if it wasn't one flagged for stack keeping and not added to stack
+                if (!mKeepStack) {
                     fragmentStack.pop();
                 }
                 // uses fragment name to find displayview-relevant position
