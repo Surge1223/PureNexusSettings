@@ -20,10 +20,13 @@ package com.android.purenexussettings.preferences;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.graphics.PixelFormat;
 import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -32,10 +35,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.purenexussettings.R;
+import com.android.purenexussettings.TinkerActivity;
+import com.android.purenexussettings.preferences.ColorPickerView.OnColorChangedListener;
 
 import java.util.Locale;
 
-public class ColorPickerDialog extends Dialog implements ColorPickerView.OnColorChangedListener, View.OnClickListener {
+public class ColorPickerDialog extends Dialog implements OnColorChangedListener, OnClickListener {
 
     public static String GLOBAL_COLOR_USER = "global_color_user";
 
@@ -209,8 +214,8 @@ public class ColorPickerDialog extends Dialog implements ColorPickerView.OnColor
             });
 
             previewRect.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
+                @Override
+                public boolean onLongClick(View v) {
                     try {
                         Settings.Global.putInt(getContext().getContentResolver(), customKey + "_" + extraKey, mNewColor.getColor());
                         previewRect.setColor(mNewColor.getColor());
@@ -218,7 +223,7 @@ public class ColorPickerDialog extends Dialog implements ColorPickerView.OnColor
                     }
                     return true;
                 }
-                });
+            });
         }
     }
 

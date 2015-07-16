@@ -19,6 +19,8 @@
 package com.android.purenexussettings.preferences;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -26,6 +28,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceClickListener;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
@@ -35,12 +38,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.android.purenexussettings.R;
+import com.android.purenexussettings.TinkerActivity;
+import com.android.purenexussettings.preferences.ColorPickerDialog.OnColorChangedListener;
 
 import java.util.Locale;
 
 
-public class ColorPickerPreference extends Preference implements
-        Preference.OnPreferenceClickListener, ColorPickerDialog.OnColorChangedListener {
+public class ColorPickerPreference extends Preference implements OnPreferenceClickListener, OnColorChangedListener {
 
     View mView;
     ColorPickerDialog mDialog;
@@ -228,8 +232,17 @@ public class ColorPickerPreference extends Preference implements
 
     protected void showDialog(Bundle state) {
         if (mDialog == null || !mDialog.isShowing()) {
+            // force orientation to stay while dialog is open
+            TinkerActivity.lockCurrentOrientation((TinkerActivity) getContext());
             mDialog = new ColorPickerDialog(getContext(), mValue, mDefault, mKey, mTitle);
             mDialog.setOnColorChangedListener(this);
+            // undo orientation fixing on dismiss of dialog
+            mDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialog) {
+                    ((TinkerActivity) getContext()).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+                }
+            });
             if (mAlphaSliderEnabled) {
                 mDialog.setAlphaSliderVisible(true);
                 mDialog.setAlphaSliderText(mAlphaSliderText);

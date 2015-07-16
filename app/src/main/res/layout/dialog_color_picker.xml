@@ -17,10 +17,10 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
     android:orientation="vertical">
 
     <TextView
@@ -37,7 +37,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
@@ -45,18 +44,33 @@
             android:layout_height="wrap_content"
             android:text="@string/hex"
             android:textSize="20sp"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center" />
 
-        <EditText
-            android:id="@+id/hex"
-            android:hint="@string/hex_hint"
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:lines="1"
-            android:maxLines="1"
-            android:maxLength="9" />
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/hex_hint"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/hex"
+                android:hint="@string/hex_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:lines="1"
+                android:maxLines="1"
+                android:maxLength="9"/>
+
+        </FrameLayout>
 
         <Button
             android:id="@+id/enter"
@@ -66,8 +80,17 @@
             android:background="@drawable/widget_list_selector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="1dp"
+            android:minWidth="1dp"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginStart="5dp"
             android:gravity="center" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/reset"
@@ -77,9 +100,14 @@
             android:background="@drawable/widget_list_selector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:minHeight="1dp"
+            android:minWidth="1dp"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:gravity="center" />
+
     </LinearLayout>
 
     <com.android.purenexussettings.preferences.ColorPickerView
@@ -97,58 +125,59 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
         android:layout_marginTop="2dp">
 
         <com.android.purenexussettings.preferences.ColorPickerPanelView
             android:id="@+id/userset1_panel"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
             android:layout_weight="0.5" />
 
         <com.android.purenexussettings.preferences.ColorPickerPanelView
             android:id="@+id/userset2_panel"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
             android:layout_weight="0.5" />
 
         <com.android.purenexussettings.preferences.ColorPickerPanelView
             android:id="@+id/userset3_panel"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
             android:layout_weight="0.5" />
 
         <com.android.purenexussettings.preferences.ColorPickerPanelView
             android:id="@+id/userset4_panel"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
             android:layout_weight="0.5" />
 
         <com.android.purenexussettings.preferences.ColorPickerPanelView
             android:id="@+id/userset5_panel"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
             android:layout_weight="0.5" />
 
         <com.android.purenexussettings.preferences.ColorPickerPanelView
             android:id="@+id/userset6_panel"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
             android:layout_weight="0.5" />
 
     </LinearLayout>
@@ -164,13 +193,14 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:layout_marginBottom="10dp">
 
         <com.android.purenexussettings.preferences.ColorPickerPanelView
             android:id="@+id/old_color_panel"
-            android:layout_width="0px"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5" />
 
@@ -180,12 +210,12 @@
             android:text="@string/color_right_arrow"
             android:textSize="16sp"
             android:gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
 
         <com.android.purenexussettings.preferences.ColorPickerPanelView
             android:id="@+id/new_color_panel"
-            android:layout_width="0px"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5" />
 
