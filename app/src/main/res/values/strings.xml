@@ -41,6 +41,7 @@
         <item>Extra info and tools</item>
         <item>Buttons and layout</item>
         <item>Dimensions</item>
+        <item>Clock and date</item>
         <item>Navigation bar</item>
         <item>Notification drawer</item>
         <item>Power Menu</item>
@@ -78,6 +79,7 @@
         <item>DeviceFragment</item>
         <item>NavBarEdit</item>
         <item>NavBarDimen</item>
+        <item>StatusBarClock</item>
         <item>NavigationBarFragment</item>
         <item>NotificationDrawerFragment</item>
         <item>PowerMenuFragment</item>
@@ -92,6 +94,7 @@
     <!-- Keep them in order as the titles are in -->
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons">
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -175,7 +178,7 @@
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on Color to apply</string>
     <string name="hex">Hex:</string>
-    <string name="hex_hint">#ff000000</string> <!-- should it be #aarrggbb ? -->
+    <string name="hex_hint">#FFDDDDDD</string>
     <string name="hex_check_button_text">PREVIEW</string>
     <string name="hex_reset_button_text">RESET</string>
     <string name="colorpicker_summary">Current color</string>
@@ -480,6 +483,161 @@
         <item>@string/screen_recorder_bitrate_20000000</item>
     </string-array>
 
+    <!-- Power menu fragment strings -->
+    <string name="power_menu_reboot_title">Reboot menu</string>
+    <string name="power_menu_screenshot_title">Screenshot</string>
+    <string name="power_menu_screenrecord_title">Screen record</string>
+    <string name="power_menu_airplane_title">Airplane mode</string>
+    <string name="power_menu_users_title">User switcher</string>
+    <string name="power_menu_settings_title">Settings shortcut</string>
+    <string name="power_menu_lockdown_title">Device lockdown</string>
+    <string name="power_menu_bug_report_title">Bug report</string>
+    <string name="power_menu_sound_title">Sound panel</string>
+    <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
+    <string-array name="power_menu_actions_array" translatable="false">
+        <item>power</item>
+        <item>reboot</item>
+        <item>screenshot</item>
+        <item>screenrecord</item>
+        <item>settings</item>
+        <item>lockdown</item>
+        <item>airplane</item>
+        <item>users</item>
+        <item>silent</item>
+    </string-array>
+
+    <!-- Statusbar fragment strings -->
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
+    <string name="bt_indicator">Bluetooth icon</string>
+    <string name="bt_indicator_summary">Show bluetooth icon when enabled</string>
+    <string name="alarm_indicator">Alarm icon</string>
+    <string name="alarm_indicator_summary">Show alarm icon when enabled</string>
+    <!-- Clock -->
+    <string name="status_bar_clock">Clock and date</string>
+    <string name="status_bar_clock_summary">Custom clock and date options</string>
+    <string name="clock_title_enable">Alignment</string>
+    <string name="clock_color_title">Clock color</string>
+    <string name="status_bar_show_clock_title">Show clock and date</string>
+    <string name="status_bar_am_pm_title">AM/PM</string>
+    <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
+    <string name="right_clock">Right clock</string>
+    <string name="center_clock">Center clock</string>
+    <string name="left_clock">Left clock</string>
+    <string name="clock_date_display">Date</string>
+    <string name="clock_date_style">Date style</string>
+    <string name="clock_date_format">Date format</string>
+    <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Enter string</string>
+    <string name="clock_am_pm_date_normal">Normal</string>
+    <string name="clock_am_pm_date_small">Small</string>
+    <string name="clock_am_pm_date_none">Hidden</string>
+    <string name="clock_date_style_lowercase">Lowercase</string>
+    <string name="clock_date_style_uppercase">Uppercase</string>
+    <string name="clock_date_format_custom">Custom java format</string>
+    <string name="status_bar_clock_style_reset_message">Reset clock color ?</string>
+    <!-- Battery Options -->
+    <string name="status_bar_battery_style_title">Battery status style</string>
+    <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
+    <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
+    <string name="status_bar_battery_style_circle">Circle</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Hidden</string>
+    <string name="status_bar_battery_percentage_title">Show battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
+    <!-- Battery Icon entries -->
+    <string-array name="status_bar_battery_style_entries" translatable="false">
+        <item>@string/status_bar_battery_style_icon_portrait</item>
+        <item>@string/status_bar_battery_style_icon_landscape</item>
+        <item>@string/status_bar_battery_style_circle</item>
+        <item>@string/status_bar_battery_style_text</item>
+        <item>@string/status_bar_battery_style_hidden</item>
+    </string-array>
+    <string-array name="status_bar_battery_style_values" translatable="false">
+        <item>0</item>
+        <item>5</item>
+        <item>2</item>
+        <item>6</item>
+        <item>4</item>
+    </string-array>
+    <!-- Battery Percentage entries -->
+    <string-array name="status_bar_battery_percentage_entries" translatable="false">
+        <item>@string/status_bar_battery_percentage_default</item>
+        <item>@string/status_bar_battery_percentage_text_inside</item>
+        <item>@string/status_bar_battery_percentage_text_next</item>
+    </string-array>
+    <string-array name="status_bar_battery_percentage_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <!-- Clock & Date options -->
+    <string-array name="clock_style_entries" translatable="false">
+        <item>@string/right_clock</item>
+        <item>@string/center_clock</item>
+        <item>@string/left_clock</item>
+    </string-array>
+    <string-array name="clock_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="entries_status_bar_am_pm">
+        <item>@string/clock_am_pm_date_none</item>
+        <item>@string/clock_am_pm_date_small</item>
+        <item>@string/clock_am_pm_date_normal</item>
+    </string-array>
+    <string-array name="values_status_bar_am_pm" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="clock_date_display_entries">
+        <item>@string/clock_am_pm_date_none</item>
+        <item>@string/clock_am_pm_date_small</item>
+        <item>@string/clock_am_pm_date_normal</item>
+    </string-array>
+    <string-array name="clock_date_display_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="clock_date_style_entries">
+        <item>@string/clock_am_pm_date_normal</item>
+        <item>@string/clock_date_style_lowercase</item>
+        <item>@string/clock_date_style_uppercase</item>
+    </string-array>
+    <string-array name="clock_date_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="clock_date_format_entries_values">
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>dd-MM-yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
+        <item>EEE</item>
+        <item>EEE dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE MM/dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE MMM dd</item>
+        <item>EEE MMMM dd</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE MM/dd</item>
+        <item>@string/clock_date_format_custom</item>
+    </string-array>
+
     <!-- More frag-specific strings... eventually -->
 
     <!-- Content Description -->
@@ -493,13 +651,13 @@
     <string name="changelog"><![CDATA[<br /><big>&#160; &#160; &#160; &#160; <b>=== <u>VERSION 1.0</u> ===</b></big><br /><br />
 &#160; &#8226; Made a groovy little settings app<br />
 &#160; &#8226; Did stuff so things would work<br />
-&#160; &#160; &#160; &#160; &#187; Things here meaning custom settings works of others<br />
+&#160; &#160; &#160; &#160; &#187; Things here meaning the custom settings works of others<br />
 &#160; &#8226; Did lots of minor UI things<br />
 &#160; &#160; &#160; &#160; &#187; Animated fragment switching and backstack handling<br />
 &#160; &#160; &#160; &#160; &#187; Actionbar options when interacting with navdrawer<br />
 &#160; &#8226; Added in widget that replicates sliding navdrawer options<br />
 &#160; &#8226; Modified margaritov/SlimRom color picker<br />
-&#160; &#160; &#160; &#160; &#187; Added alpha slider text - represents current alpha as %<br />
+&#160; &#160; &#160; &#160; &#187; Added alpha slider text - represents current alpha as percentage<br />
 &#160; &#160; &#160; &#160; &#187; Fixed minor hex-picking int-to-HSV-to-int issue<br />
 &#160; &#160; &#160; &#160; &#187; Edited color picker layout to show better in landscape<br />
 &#160; &#160; &#160; &#160; &#187; Added reset button for default color in color picker<br />
@@ -512,7 +670,7 @@
 &#160; &#8226; Beans for the rom and an excuse to tinker<br />
 &#160; &#8226; Cheekybastards for living up to their namesake<br />
 &#160; &#8226; Gunthermic, for testing and great ideas with the colorpicker<br />
-&#160; &#8226; All contributors to stackoverflow<br />
+&#160; &#8226; All contributors to stackoverflow or various other java/android app making resources<br />
 &#160; &#8226; Those not mentioned but should have been<br />]]></string>
 
 </resources>
