@@ -113,10 +113,12 @@ public class AboutFragment extends Fragment {
 
         //gplus
         LinearLayout link1 = (LinearLayout)v.findViewById(R.id.link1_card);
-        //twitter
+        //gplus
         LinearLayout link2 = (LinearLayout)v.findViewById(R.id.link2_card);
-        //donate
+        //twitter
         LinearLayout link3 = (LinearLayout)v.findViewById(R.id.link3_card);
+        //donate
+        LinearLayout link4 = (LinearLayout)v.findViewById(R.id.link4_card);
 
         thanks.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,7 +134,7 @@ public class AboutFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent link = new Intent(Intent.ACTION_VIEW);
-                Uri url = Uri.parse(getString(R.string.gplus_data));
+                Uri url = Uri.parse(getString(R.string.pushbullet_data));
                 link.setData(url);
                 startActivity(link);
             }
@@ -142,13 +144,23 @@ public class AboutFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent link = new Intent(Intent.ACTION_VIEW);
-                Uri url = Uri.parse(getString(R.string.twit_data));
+                Uri url = Uri.parse(getString(R.string.gplus_data));
                 link.setData(url);
                 startActivity(link);
             }
         });
 
         link3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent link = new Intent(Intent.ACTION_VIEW);
+                Uri url = Uri.parse(getString(R.string.twit_data));
+                link.setData(url);
+                startActivity(link);
+            }
+        });
+
+        link4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent link = new Intent(Intent.ACTION_VIEW);
