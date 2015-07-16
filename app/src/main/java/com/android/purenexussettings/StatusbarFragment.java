@@ -30,6 +30,7 @@ public class StatusbarFragment extends PreferenceFragment implements OnPreferenc
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String CLOCK_STYLE_PREF = "clock_style_pref";
+    private static final String NETWORK_TRAFFIC_SETTINGS = "network_traffic_settings";
 
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
@@ -37,6 +38,7 @@ public class StatusbarFragment extends PreferenceFragment implements OnPreferenc
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarBatteryShowPercent;
     private Preference mStatusClock;
+    private Preference mNetTraf;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ public class StatusbarFragment extends PreferenceFragment implements OnPreferenc
         mStatusBarBatteryShowPercent = (ListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
 
         mStatusClock = (Preference) findPreference(CLOCK_STYLE_PREF);
+        mNetTraf = (Preference) findPreference(NETWORK_TRAFFIC_SETTINGS);
 
         int batteryStyle = Settings.System.getInt(resolver, STATUS_BAR_BATTERY_STYLE, 0);
         mStatusBarBattery.setValue(String.valueOf(batteryStyle));
@@ -88,6 +91,12 @@ public class StatusbarFragment extends PreferenceFragment implements OnPreferenc
     public boolean onPreferenceTreeClick(PreferenceScreen prefScreen, @NonNull Preference pref) {
         if (pref == mStatusClock) {
             ((TinkerActivity)getActivity()).displayStatusClock();
+
+            return true;
+        }
+
+        if (pref == mNetTraf) {
+            ((TinkerActivity)getActivity()).displayNetTraff();
 
             return true;
         }

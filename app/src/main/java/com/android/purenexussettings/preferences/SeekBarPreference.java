@@ -34,13 +34,14 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
 import com.android.purenexussettings.R;
 
 import java.math.BigDecimal;
 
-public class SeekBarPreference extends DialogPreference implements SeekBar.OnSeekBarChangeListener, OnClickListener
+public class SeekBarPreference extends DialogPreference implements OnSeekBarChangeListener, OnClickListener
 {
     private static final String androidns="http://schemas.android.com/apk/res/android";
 

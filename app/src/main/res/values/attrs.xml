@@ -22,6 +22,9 @@
         <attr name="decimalsshown" format="integer" />
         <attr name="animtype" format="integer" />
         <attr name="percentage" format="boolean" />
+        <attr name="interval" format="integer" />
+        <attr name="unitsLeft" format="string|reference" />
+        <attr name="unitsRight" format="string|reference" />
     </declare-styleable>
     <declare-styleable name="ColorPickPref">
         <attr name="alphaSlider" format="boolean" />

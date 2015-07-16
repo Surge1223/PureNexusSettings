@@ -533,6 +533,19 @@ public class TinkerActivity extends AppCompatActivity {
         }, 400);
     }
 
+    public void displayNetTraff() {
+        myHandler.removeCallbacksAndMessages(null);
+        mMenu = true;
+        removeCurrent();
+        // below replicates the visual delay seen when launching frags from navdrawer
+        myHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                displayView(9);
+            }
+        }, 400);
+    }
+
     public void displayQSTile() {
         myHandler.removeCallbacksAndMessages(null);
         mMenu = true;
