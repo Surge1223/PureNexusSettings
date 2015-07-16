@@ -37,6 +37,7 @@ public class NavigationBarFragment extends PreferenceFragment implements OnPrefe
     private static final String KEY_NAVIGATION_BAR_LEFT = "navigation_bar_left";
 
     private static final String CATEGORY_NAVBAR = "navigation_bar";
+    private static final String STATUS_BAR_IME_SWITCHER = "status_bar_ime_switcher";
 
     // kill-app long press back
     private SwitchPreference mKillAppLongPressBack;
@@ -56,14 +57,24 @@ public class NavigationBarFragment extends PreferenceFragment implements OnPrefe
 
         final PreferenceCategory navbarCategory = (PreferenceCategory) prefScreen.findPreference(CATEGORY_NAVBAR);
 
-        mNavBar = (Preference) prefScreen.findPreference(NAVIGATION_BAR);
-        mNavDimen = (Preference) prefScreen.findPreference(NAVIGATION_BAR_DIMEN);
+        mNavBar = prefScreen.findPreference(NAVIGATION_BAR);
+        mNavDimen = prefScreen.findPreference(NAVIGATION_BAR_DIMEN);
 
         // kill-app long press back
         mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
         mKillAppLongPressBack.setOnPreferenceChangeListener(this);
         int killAppLongPressBack = Settings.Secure.getInt(resolver, KILL_APP_LONGPRESS_BACK, 0);
         mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
+
+        // Enable or disable NavbarImeSwitcher based on boolean: config_show_cmIMESwitcher
+        //boolean showCmImeSwitcher = getResources().getBoolean(com.android.internal.R.bool.config_show_cmIMESwitcher);
+        boolean showCmImeSwitcher = true;
+        if (!showCmImeSwitcher) {
+            Preference pref = findPreference(STATUS_BAR_IME_SWITCHER);
+            if (pref != null) {
+                navbarCategory.removePreference(pref);
+            }
+        }
 
         // remove if tablet
         if ((getActivity().getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE) {

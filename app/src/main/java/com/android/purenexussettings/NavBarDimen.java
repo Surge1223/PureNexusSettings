@@ -74,17 +74,22 @@ public class NavBarDimen extends PreferenceFragment implements OnPreferenceChang
     }
 
     private void updateDimensionValues() {
+        int resID = 0;
+
         int navigationBarHeight = Settings.System.getInt(getActivity().getContentResolver(), NAVIGATION_BAR_HEIGHT, -1);
         if (navigationBarHeight == -1) {
-            navigationBarHeight = (int) (getResources().getDimension(com.android.internal.R.dimen.navigation_bar_height) / getResources().getDisplayMetrics().density);
+            resID = getResources().getIdentifier("navigation_bar_height", "dimen", "android");
+            navigationBarHeight = (int) (getResources().getDimensionPixelSize(resID) / getResources().getDisplayMetrics().density);
         }
+
         mNavigationBarHeight.setValue(String.valueOf(navigationBarHeight));
         mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
 
         if (mNavigationBarHeightLandscape != null) {
             int navigationBarHeightLandscape = Settings.System.getInt(getActivity().getContentResolver(), NAVIGATION_BAR_HEIGHT_LANDSCAPE, -1);
             if (navigationBarHeightLandscape == -1) {
-                navigationBarHeightLandscape = (int) (getResources().getDimension(com.android.internal.R.dimen.navigation_bar_height_landscape) / getResources().getDisplayMetrics().density);
+                resID = getResources().getIdentifier("navigation_bar_height_landscape", "dimen", "android");
+                navigationBarHeightLandscape = (int) (getResources().getDimensionPixelSize(resID) / getResources().getDisplayMetrics().density);
             }
             mNavigationBarHeightLandscape.setValue(String.valueOf(navigationBarHeightLandscape));
             mNavigationBarHeightLandscape.setSummary(mNavigationBarHeightLandscape.getEntry());
@@ -93,7 +98,8 @@ public class NavBarDimen extends PreferenceFragment implements OnPreferenceChang
         if (mNavigationBarWidth != null) {
             int navigationBarWidth = Settings.System.getInt(getActivity().getContentResolver(), NAVIGATION_BAR_WIDTH, -1);
             if (navigationBarWidth == -1) {
-                navigationBarWidth = (int) (getResources().getDimension(com.android.internal.R.dimen.navigation_bar_width) / getResources().getDisplayMetrics().density);
+                resID = getResources().getIdentifier("navigation_bar_width", "dimen", "android");
+                navigationBarWidth = (int) (getResources().getDimensionPixelSize(resID) / getResources().getDisplayMetrics().density);
             }
             mNavigationBarWidth.setValue(String.valueOf(navigationBarWidth));
             mNavigationBarWidth.setSummary(mNavigationBarWidth.getEntry());
