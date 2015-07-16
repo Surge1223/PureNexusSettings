@@ -34,38 +34,41 @@
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
         <item>About</item>
-        <item>BuildProp</item>
-        <item>EditProp</item>
-        <item>AppPicker</item>
+        <item>Build prop</item>
+        <item>Edit build prop</item>
+        <item>App picker</item>
         <item>Select and order tiles</item>
         <item>Extra info and tools</item>
         <item>Buttons and layout</item>
         <item>Dimensions</item>
         <item>Clock and date</item>
-        <item>Navigation bar</item>
+        <item>Network traffic</item>
         <item>Notification drawer</item>
-        <item>Power Menu</item>
         <item>Recent apps</item>
         <item>Status bar</item>
-        <item>App Ops</item>
-        <item>Screen Recorder</item>
+        <item>Navigation bar</item>
+        <item>Power menu</item>
+        <item>Volume rocker</item>
+        <item>App ops</item>
+        <item>Heads up notifications</item>
+        <item>Screen recorder</item>
         <item>cLock</item>
     </string-array>
 
     <!-- Nav Drawer categories -->
     <!-- keep in the order they will appear! -->
     <string-array name="nav_drawer_cats">
-        <item>Personalization</item>
+        <item>Interface</item>
+        <item>Buttons</item>
         <item>System</item>
-        <item>cLock</item>
     </string-array>
 
     <!-- Nav Drawer items that are first in their category -->
     <!-- keep in the order they will appear! -->
     <string-array name="nav_drawer_cat_items">
+        <item>Notification drawer</item>
         <item>Navigation bar</item>
-        <item>App Ops</item>
-        <item>cLock</item>
+        <item>App ops</item>
     </string-array>
 
     <!-- Nav Drawer Fragment names-->
@@ -80,12 +83,15 @@
         <item>NavBarEdit</item>
         <item>NavBarDimen</item>
         <item>StatusBarClock</item>
-        <item>NavigationBarFragment</item>
+        <item>NetworkTraffic</item>
         <item>NotificationDrawerFragment</item>
-        <item>PowerMenuFragment</item>
         <item>RecentAppsFragment</item>
         <item>StatusbarFragment</item>
+        <item>NavigationBarFragment</item>
+        <item>PowerMenuFragment</item>
+        <item>VolumeRockerFragment</item>
         <item>AppOps</item>
+        <item>HeadsUpFragment</item>
         <item>ScreenRecorderFragment</item>
         <item>cLock</item>
     </string-array>
@@ -94,6 +100,9 @@
     <!-- Keep them in order as the titles are in -->
     <!-- Also note that icons for items not in navdrawer won't be shown -->
     <array name="nav_drawer_icons">
+        <item>null</item>
+        <item>null</item>
+        <item>null</item>
         <item>null</item>
         <item>null</item>
         <item>null</item>
@@ -195,6 +204,58 @@
     <string name="donothing">Do nothing</string>
     <string name="picker_summary">Not set</string>
 
+    <!-- About Frag strings -->
+    <string name="pushbullet_data">https://plus.google.com/communities/103055954354785266764</string>
+    <string name="gplus_data">https://plus.google.com/communities/103055954354785266764</string>
+    <string name="twit_data">https://twitter.com/BeansTown106</string>
+    <string name="payp_data">http://forum.xda-developers.com/donatetome.php?u=4395895</string>
+    <string name="miscinfo_title">App Info</string>
+    <string name="miscinfo_summary">Click here for changelog and app-specific credits</string>
+    <string name="nexus_about">PureNexus info</string>
+    <string name="nexus_about_summary">Misc info about the rom, developer and contributors</string>
+    <string name="nexus_useful">Useful links</string>
+    <string name="nexus_updates">Pushbullet update notifications</string>
+    <string name="lead_dev">Lead Developer</string>
+    <string name="beans">BeansTown106</string>
+    <string name="beans_sum">Main PureNexus maintainer</string>
+    <string name="beans_twit">BeansTown\'s Twitter</string>
+    <string name="nexus_gplus">PureNexus Google+ community</string>
+    <string name="donate">Donate to support development</string>
+    <string name="contribute">Contributors</string>
+    <string name="devonte">Dwitherell</string>
+    <string name="devonte_sum">Coder/tweaker</string>
+    <string name="dhack">Dhacker29</string>
+    <string name="dhack_sum">Gapps Base</string>
+    <string name="daveya">DaveyAnnihalation</string>
+    <string name="wally">Wally3614</string>
+    <string name="gfx_sum">Graphics/icons</string>
+    <string name="surge">Surge1223</string>
+    <string name="bajasur">Bajasur83</string>
+    <string name="tweak_sum">Misc Tweaks</string>
+
+    <!-- BuildProp edit strings -->
+    <string name="buildproptitle">Build.prop editor</string>
+    <string name="buildpropsummary">Click to open build.prop editor</string>
+    <string name="editprop_key">Property Key</string>
+    <string name="editprop_name">Property Name</string>
+    <string name="editprop_title">Edit/Add Property</string>
+    <string name="editprop_unsaved_changes_title">Unsaved Changes</string>
+    <string name="editprop_unsaved_changes_message">Would you like to set this property?</string>
+    <string name="editprop_delete_item_title">Delete Item</string>
+    <string name="editprop_delete_item_message">Would you like to delete this property?</string>
+
+    <!-- Device Frag strings -->
+    <string name="device_info_title">Device info</string>
+    <string name="device_summ">Get general info about your device</string>
+    <string name="title_battery_history">Battery history</string>
+    <string name="summary_battery_history">Summary of how battery has been used</string>
+    <string name="title_battery_information">Battery information</string>
+    <string name="summary_battery_information">Current battery status information</string>
+    <string name="title_usage_statistics">Usage statistics</string>
+    <string name="summary_usage_statistics">Summary of application usage</string>
+    <string name="wifi_title">WiFi information</string>
+    <string name="wifi_summary">Various bits of WiFi relevant information</string>
+
     <!-- qs tile strings -->
     <string name="qs_category_title">Quick Settings panel</string>
     <string name="qs_order_title">Select and order tiles</string>
@@ -225,158 +286,30 @@
     <string name="qs_brightness_slider_title">Brightness slider</string>
     <string name="qs_advanced_location_title">Advanced location settings</string>
     <string name="qs_advanced_location_summary">Enable advanced settings for location in quick settings</string>
-    <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
-    <string name="status_bar_quick_qs_pulldown_summary">Right edge of the status bar pulls down Quick Settings</string>
     <string name="status_bar_show_weather_title">Show weather</string>
     <string name="status_bar_show_weather_summary">Show the weather above the Quick Settings panel</string>
-
-    <!-- About Frag strings -->
-    <string name="gplus_data">https://plus.google.com/u/0/+NathanBenis/posts</string>
-    <string name="twit_data">https://twitter.com/BeansTown106</string>
-    <string name="payp_data">http://forum.xda-developers.com/donatetome.php?u=4395895</string>
-    <string name="miscinfo_title">App Info</string>
-    <string name="miscinfo_summary">Click here for changelog and app-specific credits</string>
-    <string name="nexus_about">PureNexus info</string>
-    <string name="nexus_about_summary">Misc info about the rom, developer and contributors</string>
-    <string name="lead_dev">Lead Developer</string>
-    <string name="beans">BeansTown106</string>
-    <string name="beans_twit">BeansTown\'s Twitter</string>
-    <string name="beans_gplus">BeansTown\'s Google+</string>
-    <string name="donate">Donate</string>
-    <string name="donate_sum">Support rom development by donating.</string>
-    <string name="contribute">Contributors</string>
-    <string name="devonte">Dwitherell</string>
-    <string name="devonte_sum">Coder/tweaker</string>
-    <string name="dhack">Dhacker29</string>
-    <string name="dhack_sum">Gapps Base/kernel</string>
-    <string name="layers">Layers team</string>
-    <string name="layers_sum">Layers app/exposed commits</string>
-    <string name="daveya">DaveyAnnihalation</string>
-    <string name="daveya_sum">Graphics/icons</string>
-    <string name="surge">Surge1223</string>
-    <string name="surge_sum">Misc Tweaks</string>
-    <string name="bajasur">Bajasur83</string>
-    <string name="bajasur_sum">Misc Tweaks</string>
-
-    <!-- BuildProp edit strings -->
-    <string name="buildproptitle">Build.prop editor</string>
-    <string name="buildpropsummary">Click to open build.prop editor</string>
-    <string name="editprop_key">Property Key</string>
-    <string name="editprop_name">Property Name</string>
-    <string name="editprop_title">Edit/Add Property</string>
-    <string name="editprop_unsaved_changes_title">Unsaved Changes</string>
-    <string name="editprop_unsaved_changes_message">Would you like to set this property?</string>
-    <string name="editprop_delete_item_title">Delete Item</string>
-    <string name="editprop_delete_item_message">Would you like to delete this property?</string>
-
-    <!-- Device Frag strings -->
-    <string name="device_info_title">Device info</string>
-    <string name="device_summ">Get general info about your device</string>
-    <string name="title_battery_history">Battery history</string>
-    <string name="summary_battery_history">Summary of how battery has been used</string>
-    <string name="title_battery_information">Battery information</string>
-    <string name="summary_battery_information">Current battery status information</string>
-    <string name="title_usage_statistics">Usage statistics</string>
-    <string name="summary_usage_statistics">Summary of application usage</string>
-    <string name="wifi_title">WiFi information</string>
-    <string name="wifi_summary">Various bits of WiFi relevant information</string>
-
-    <!-- Navbar fragment strings -->
-    <string name="navigation_bar_opt">Navbar options</string>
-    <string name="navigation_bar_cus">Navbar customization</string>
-    <string name="kill_app_longpress_back">Kill app back button</string>
-    <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back button</string>
-    <string name="navigation_bar_left_title">Left-handed mode</string>
-    <string name="navigation_bar_left_summary">Place the navigation bar on the left side of the screen in landscape mode</string>
-    <string name="nav_bar_title">Buttons and layout</string>
-    <string name="navigation_bar_help_text">To get started tap the edit icon to unlock the navigation bar for editing.\n\nYou can tap an icon to change its shortcut, or long press an icon to re-arrange the layout.\n\nTap \'Save\' to commit your changes, or \'Restore defaults\' to reset the layout to default settings.</string>
-    <string name="navigation_restore_button_text">Restore\ndefaults</string>
-    <string name="navigation_edit_button_text">Edit</string>
-    <string name="navigation_save_button_text">Save</string>
-    <string name="reset">Reset</string>
-    <string name="ok">OK</string>
-    <string name="navigation_bar_reset_message">Delete current settings and restore the default layout?</string>
-    <string name="navigation_bar_arrow_keys_title">Show arrow keys while typing</string>
-    <string name="navigation_bar_arrow_keys_summary">Display left and right cursor buttons while typing. Overrides IME switcher.</string>
-    <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
-    <string name="double_tap_sleep_nav_bar_summary">Double tap on the navigation bar to put the device to sleep</string>
-    <string name="navbar_enable_bar">Enable</string>
-    <string name="navbar_dimen_title">Dimensions</string>
-    <string name="navbar_dimensions_reset_message">Reset all dimensions entries to default?</string>
-    <string name="navigation_bar_height_title">Navigation bar height</string>
-    <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
-    <string name="navigation_bar_width_title">Navigation bar width</string>
-    <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
-    <string name="navigation_bar_size_36_dp">36 dp</string>
-    <string name="navigation_bar_size_30_dp">30 dp</string>
-    <string name="navigation_bar_size_24_dp">24 dp</string>
-    <string name="navigation_bar_size_52_dp">52 dp</string>
-    <string name="navigation_bar_size_48_dp_default">48 dp (default)</string>
-    <string name="navigation_bar_size_44_dp">44 dp</string>
-    <string name="navigation_bar_size_40_dp">40 dp</string>
-    <string name="navigation_bar_size_42_dp">42 dp</string>
-    <string name="navigation_bar_size_0_dp">0 dp (off)</string>
-      <!-- Navigation bar custom dimensions -->
-    <string-array name="navigation_bar_width_entries" translatable="false">
-        <item>@string/navigation_bar_size_42_dp_default</item>
-        <item>@string/navigation_bar_size_40_dp</item>
-        <item>@string/navigation_bar_size_36_dp</item>
-        <item>@string/navigation_bar_size_30_dp</item>
-        <item>@string/navigation_bar_size_24_dp</item>
-        <item>@string/navigation_bar_size_0_dp</item>
+    <string name="notification_force_expand_title">Force expanded notifications</string>
+    <string name="notification_force_expand_summary">Auto expands notifications on apps that support it</string>
+    <!-- Quick pulldown -->
+    <string name="quick_pulldown_title">Quick pulldown</string>
+    <string name="quick_pulldown_summary">%1$s edge of the status bar pulls down Quick Settings</string>
+    <string name="quick_pulldown_summary_left">Left</string>
+    <string name="quick_pulldown_summary_right">Right</string>
+    <string name="quick_pulldown_off">Off</string>
+    <string name="quick_pulldown_left">Left</string>
+    <string name="quick_pulldown_right">Right</string>
+    <string-array name="quick_pulldown_entries" translatable="false">
+        <item>@string/quick_pulldown_off</item>
+        <item>@string/quick_pulldown_right</item>
+        <item>@string/quick_pulldown_left</item>
     </string-array>
-    <string-array name="navigation_bar_width" translatable="false">
-        <item>42</item>
-        <item>40</item>
-        <item>36</item>
-        <item>30</item>
-        <item>24</item>
+    <string-array name="quick_pulldown_values" translatable="false">
         <item>0</item>
+        <item>1</item>
+        <item>2</item>
     </string-array>
-    <string-array name="navigation_bar_height_entries" translatable="false">
-        <item>@string/navigation_bar_size_52_dp</item>
-        <item>@string/navigation_bar_size_48_dp_default</item>
-        <item>@string/navigation_bar_size_44_dp</item>
-        <item>@string/navigation_bar_size_42_dp</item>
-        <item>@string/navigation_bar_size_40_dp</item>
-        <item>@string/navigation_bar_size_36_dp</item>
-        <item>@string/navigation_bar_size_30_dp</item>
-        <item>@string/navigation_bar_size_24_dp</item>
-        <item>@string/navigation_bar_size_0_dp</item>
-    </string-array>
-    <string-array name="navigation_bar_height" translatable="false">
-        <item>52</item>
-        <item>48</item>
-        <item>44</item>
-        <item>42</item>
-        <item>40</item>
-        <item>36</item>
-        <item>30</item>
-        <item>24</item>
-        <item>0</item>
-    </string-array>
-    <string-array name="navigation_bar_height_entries_landscape" translatable="false">
-        <item>@string/navigation_bar_size_52_dp</item>
-        <item>@string/navigation_bar_size_48_dp_default</item>
-        <item>@string/navigation_bar_size_44_dp</item>
-        <item>@string/navigation_bar_size_42_dp</item>
-        <item>@string/navigation_bar_size_40_dp</item>
-        <item>@string/navigation_bar_size_36_dp</item>
-        <item>@string/navigation_bar_size_30_dp</item>
-        <item>@string/navigation_bar_size_24_dp</item>
-        <item>@string/navigation_bar_size_0_dp</item>
-    </string-array>
-    <string-array name="navigation_bar_height_landscape" translatable="false">
-        <item>52</item>
-        <item>48</item>
-        <item>44</item>
-        <item>42</item>
-        <item>40</item>
-        <item>36</item>
-        <item>30</item>
-        <item>24</item>
-        <item>0</item>
-    </string-array>
+
+
 
     <!-- RecentApps fragment strings -->
     <string name="recent_app_title">Recent apps</string>
@@ -410,100 +343,6 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
-    </string-array>
-
-    <!-- ScreenRecorder fragment strings -->
-    <string name="screen_recorder_title">Screen recorder</string>
-    <string name="screen_recorder_video_dimensions_title">Video size</string>
-    <string name="screen_recorder_video_bitrate_title">Bitrate</string>
-    <string name="screen_recorder_record_audio_title">External audio</string>
-    <string name="screen_recorder_record_audio_summary">Record audio from the microphone</string>
-      <!-- video sizes -->
-    <string name="screen_recorder_size_240x400">240x400</string>
-    <string name="screen_recorder_size_360x640">360x640</string>
-    <string name="screen_recorder_size_480x800">480x800</string>
-    <string name="screen_recorder_size_480x854">480x854</string>
-    <string name="screen_recorder_size_540x960">540x960</string>
-    <string name="screen_recorder_size_600x1024">600x1024</string>
-    <string name="screen_recorder_size_720x1280">720x1280</string>
-      <!-- frame rates -->
-    <string name="screen_recorder_bitrate_title_100000">100 kB/s</string>
-    <string name="screen_recorder_bitrate_title_250000">250 kB/s</string>
-    <string name="screen_recorder_bitrate_title_500000">500 kB/s</string>
-    <string name="screen_recorder_bitrate_title_1000000">1 MB/s</string>
-    <string name="screen_recorder_bitrate_title_2000000">2 MB/s</string>
-    <string name="screen_recorder_bitrate_title_3000000">3 MB/s</string>
-    <string name="screen_recorder_bitrate_title_4000000">4 MB/s</string>
-    <string name="screen_recorder_bitrate_title_5000000">5 MB/s</string>
-    <string name="screen_recorder_bitrate_title_10000000">10 MB/s</string>
-    <string name="screen_recorder_bitrate_title_20000000">20 MB/s</string>
-    <string name="screen_recorder_bitrate_100000">100000</string>
-    <string name="screen_recorder_bitrate_250000">250000</string>
-    <string name="screen_recorder_bitrate_500000">500000</string>
-    <string name="screen_recorder_bitrate_1000000">1000000</string>
-    <string name="screen_recorder_bitrate_2000000">2000000</string>
-    <string name="screen_recorder_bitrate_3000000">3000000</string>
-    <string name="screen_recorder_bitrate_4000000">4000000</string>
-    <string name="screen_recorder_bitrate_5000000">5000000</string>
-    <string name="screen_recorder_bitrate_10000000">10000000</string>
-    <string name="screen_recorder_bitrate_20000000">20000000</string>
-      <!-- Screen recorder video sizes -->
-    <string-array name="screen_recorder_video_sizes">
-        <item>@string/screen_recorder_size_240x400</item>
-        <item>@string/screen_recorder_size_360x640</item>
-        <item>@string/screen_recorder_size_480x800</item>
-        <item>@string/screen_recorder_size_480x854</item>
-        <item>@string/screen_recorder_size_540x960</item>
-        <item>@string/screen_recorder_size_600x1024</item>
-        <item>@string/screen_recorder_size_720x1280</item>
-    </string-array>
-      <!-- Screen recorder bitrates -->
-    <string-array name="screen_recorder_bitrate_entries">
-        <item>@string/screen_recorder_bitrate_title_100000</item>
-        <item>@string/screen_recorder_bitrate_title_250000</item>
-        <item>@string/screen_recorder_bitrate_title_500000</item>
-        <item>@string/screen_recorder_bitrate_title_1000000</item>
-        <item>@string/screen_recorder_bitrate_title_2000000</item>
-        <item>@string/screen_recorder_bitrate_title_3000000</item>
-        <item>@string/screen_recorder_bitrate_title_4000000</item>
-        <item>@string/screen_recorder_bitrate_title_5000000</item>
-        <item>@string/screen_recorder_bitrate_title_10000000</item>
-        <item>@string/screen_recorder_bitrate_title_20000000</item>
-    </string-array>
-    <string-array name="screen_recorder_bitrate_values">
-        <item>@string/screen_recorder_bitrate_100000</item>
-        <item>@string/screen_recorder_bitrate_250000</item>
-        <item>@string/screen_recorder_bitrate_500000</item>
-        <item>@string/screen_recorder_bitrate_1000000</item>
-        <item>@string/screen_recorder_bitrate_2000000</item>
-        <item>@string/screen_recorder_bitrate_3000000</item>
-        <item>@string/screen_recorder_bitrate_4000000</item>
-        <item>@string/screen_recorder_bitrate_5000000</item>
-        <item>@string/screen_recorder_bitrate_10000000</item>
-        <item>@string/screen_recorder_bitrate_20000000</item>
-    </string-array>
-
-    <!-- Power menu fragment strings -->
-    <string name="power_menu_reboot_title">Reboot menu</string>
-    <string name="power_menu_screenshot_title">Screenshot</string>
-    <string name="power_menu_screenrecord_title">Screen record</string>
-    <string name="power_menu_airplane_title">Airplane mode</string>
-    <string name="power_menu_users_title">User switcher</string>
-    <string name="power_menu_settings_title">Settings shortcut</string>
-    <string name="power_menu_lockdown_title">Device lockdown</string>
-    <string name="power_menu_bug_report_title">Bug report</string>
-    <string name="power_menu_sound_title">Sound panel</string>
-    <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
-    <string-array name="power_menu_actions_array" translatable="false">
-        <item>power</item>
-        <item>reboot</item>
-        <item>screenshot</item>
-        <item>screenrecord</item>
-        <item>settings</item>
-        <item>lockdown</item>
-        <item>airplane</item>
-        <item>users</item>
-        <item>silent</item>
     </string-array>
 
     <!-- Statusbar fragment strings -->
@@ -638,12 +477,209 @@
         <item>@string/clock_date_format_custom</item>
     </string-array>
 
+    <!-- Navbar fragment strings -->
+    <string name="navigation_bar_opt">Navbar options</string>
+    <string name="navigation_bar_cus">Navbar customization</string>
+    <string name="kill_app_longpress_back">Kill app back button</string>
+    <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back button</string>
+    <string name="navigation_bar_left_title">Left-handed mode</string>
+    <string name="navigation_bar_left_summary">Place the navigation bar on the left side of the screen in landscape mode</string>
+    <string name="nav_bar_title">Buttons and layout</string>
+    <string name="navigation_bar_help_text">To get started tap the edit icon to unlock the navigation bar for editing.\n\nYou can tap an icon to change its shortcut, or long press an icon to re-arrange the layout.\n\nTap \'Save\' to commit your changes, or \'Restore defaults\' to reset the layout to default settings.</string>
+    <string name="navigation_restore_button_text">Restore\ndefaults</string>
+    <string name="navigation_edit_button_text">Edit</string>
+    <string name="navigation_save_button_text">Save</string>
+    <string name="reset">Reset</string>
+    <string name="ok">OK</string>
+    <string name="navigation_bar_reset_message">Delete current settings and restore the default layout?</string>
+    <string name="navigation_bar_arrow_keys_title">Show arrow keys while typing</string>
+    <string name="navigation_bar_arrow_keys_summary">Display left and right cursor buttons while typing. Overrides IME switcher.</string>
+    <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
+    <string name="double_tap_sleep_nav_bar_summary">Double tap on the navigation bar to put the device to sleep</string>
+    <string name="navbar_enable_bar">Enable</string>
+    <string name="navbar_dimen_title">Dimensions</string>
+    <string name="navbar_dimensions_reset_message">Reset all dimensions entries to default?</string>
+    <string name="navigation_bar_height_title">Navigation bar height</string>
+    <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
+    <string name="navigation_bar_width_title">Navigation bar width</string>
+    <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
+    <string name="navigation_bar_size_36_dp">36 dp</string>
+    <string name="navigation_bar_size_30_dp">30 dp</string>
+    <string name="navigation_bar_size_24_dp">24 dp</string>
+    <string name="navigation_bar_size_52_dp">52 dp</string>
+    <string name="navigation_bar_size_48_dp_default">48 dp (default)</string>
+    <string name="navigation_bar_size_44_dp">44 dp</string>
+    <string name="navigation_bar_size_40_dp">40 dp</string>
+    <string name="navigation_bar_size_42_dp">42 dp</string>
+    <string name="navigation_bar_size_0_dp">0 dp (off)</string>
+      <!-- Navigation bar custom dimensions -->
+    <string-array name="navigation_bar_width_entries" translatable="false">
+        <item>@string/navigation_bar_size_42_dp_default</item>
+        <item>@string/navigation_bar_size_40_dp</item>
+        <item>@string/navigation_bar_size_36_dp</item>
+        <item>@string/navigation_bar_size_30_dp</item>
+        <item>@string/navigation_bar_size_24_dp</item>
+        <item>@string/navigation_bar_size_0_dp</item>
+    </string-array>
+    <string-array name="navigation_bar_width" translatable="false">
+        <item>42</item>
+        <item>40</item>
+        <item>36</item>
+        <item>30</item>
+        <item>24</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="navigation_bar_height_entries" translatable="false">
+        <item>@string/navigation_bar_size_52_dp</item>
+        <item>@string/navigation_bar_size_48_dp_default</item>
+        <item>@string/navigation_bar_size_44_dp</item>
+        <item>@string/navigation_bar_size_42_dp</item>
+        <item>@string/navigation_bar_size_40_dp</item>
+        <item>@string/navigation_bar_size_36_dp</item>
+        <item>@string/navigation_bar_size_30_dp</item>
+        <item>@string/navigation_bar_size_24_dp</item>
+        <item>@string/navigation_bar_size_0_dp</item>
+    </string-array>
+    <string-array name="navigation_bar_height" translatable="false">
+        <item>52</item>
+        <item>48</item>
+        <item>44</item>
+        <item>42</item>
+        <item>40</item>
+        <item>36</item>
+        <item>30</item>
+        <item>24</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="navigation_bar_height_entries_landscape" translatable="false">
+        <item>@string/navigation_bar_size_52_dp</item>
+        <item>@string/navigation_bar_size_48_dp_default</item>
+        <item>@string/navigation_bar_size_44_dp</item>
+        <item>@string/navigation_bar_size_42_dp</item>
+        <item>@string/navigation_bar_size_40_dp</item>
+        <item>@string/navigation_bar_size_36_dp</item>
+        <item>@string/navigation_bar_size_30_dp</item>
+        <item>@string/navigation_bar_size_24_dp</item>
+        <item>@string/navigation_bar_size_0_dp</item>
+    </string-array>
+    <string-array name="navigation_bar_height_landscape" translatable="false">
+        <item>52</item>
+        <item>48</item>
+        <item>44</item>
+        <item>42</item>
+        <item>40</item>
+        <item>36</item>
+        <item>30</item>
+        <item>24</item>
+        <item>0</item>
+    </string-array>
+
+    <!-- Power menu fragment strings -->
+    <string name="power_menu_reboot_title">Reboot menu</string>
+    <string name="power_menu_screenshot_title">Screenshot</string>
+    <string name="power_menu_screenrecord_title">Screen record</string>
+    <string name="power_menu_airplane_title">Airplane mode</string>
+    <string name="power_menu_users_title">User switcher</string>
+    <string name="power_menu_settings_title">Settings shortcut</string>
+    <string name="power_menu_lockdown_title">Device lockdown</string>
+    <string name="power_menu_bug_report_title">Bug report</string>
+    <string name="power_menu_sound_title">Sound panel</string>
+    <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
+    <string-array name="power_menu_actions_array" translatable="false">
+        <item>power</item>
+        <item>reboot</item>
+        <item>screenshot</item>
+        <item>screenrecord</item>
+        <item>settings</item>
+        <item>lockdown</item>
+        <item>airplane</item>
+        <item>users</item>
+        <item>silent</item>
+    </string-array>
+
+    <!-- VolumeRocker fragment strings -->
+
+
+    <!-- HeadsUp fragment strings -->
+
+
+    <!-- ScreenRecorder fragment strings -->
+    <string name="screen_recorder_title">Screen recorder</string>
+    <string name="screen_recorder_video_dimensions_title">Video size</string>
+    <string name="screen_recorder_video_bitrate_title">Bitrate</string>
+    <string name="screen_recorder_record_audio_title">External audio</string>
+    <string name="screen_recorder_record_audio_summary">Record audio from the microphone</string>
+      <!-- video sizes -->
+    <string name="screen_recorder_size_240x400">240x400</string>
+    <string name="screen_recorder_size_360x640">360x640</string>
+    <string name="screen_recorder_size_480x800">480x800</string>
+    <string name="screen_recorder_size_480x854">480x854</string>
+    <string name="screen_recorder_size_540x960">540x960</string>
+    <string name="screen_recorder_size_600x1024">600x1024</string>
+    <string name="screen_recorder_size_720x1280">720x1280</string>
+      <!-- frame rates -->
+    <string name="screen_recorder_bitrate_title_100000">100 kB/s</string>
+    <string name="screen_recorder_bitrate_title_250000">250 kB/s</string>
+    <string name="screen_recorder_bitrate_title_500000">500 kB/s</string>
+    <string name="screen_recorder_bitrate_title_1000000">1 MB/s</string>
+    <string name="screen_recorder_bitrate_title_2000000">2 MB/s</string>
+    <string name="screen_recorder_bitrate_title_3000000">3 MB/s</string>
+    <string name="screen_recorder_bitrate_title_4000000">4 MB/s</string>
+    <string name="screen_recorder_bitrate_title_5000000">5 MB/s</string>
+    <string name="screen_recorder_bitrate_title_10000000">10 MB/s</string>
+    <string name="screen_recorder_bitrate_title_20000000">20 MB/s</string>
+    <string name="screen_recorder_bitrate_100000">100000</string>
+    <string name="screen_recorder_bitrate_250000">250000</string>
+    <string name="screen_recorder_bitrate_500000">500000</string>
+    <string name="screen_recorder_bitrate_1000000">1000000</string>
+    <string name="screen_recorder_bitrate_2000000">2000000</string>
+    <string name="screen_recorder_bitrate_3000000">3000000</string>
+    <string name="screen_recorder_bitrate_4000000">4000000</string>
+    <string name="screen_recorder_bitrate_5000000">5000000</string>
+    <string name="screen_recorder_bitrate_10000000">10000000</string>
+    <string name="screen_recorder_bitrate_20000000">20000000</string>
+      <!-- Screen recorder video sizes -->
+    <string-array name="screen_recorder_video_sizes">
+        <item>@string/screen_recorder_size_240x400</item>
+        <item>@string/screen_recorder_size_360x640</item>
+        <item>@string/screen_recorder_size_480x800</item>
+        <item>@string/screen_recorder_size_480x854</item>
+        <item>@string/screen_recorder_size_540x960</item>
+        <item>@string/screen_recorder_size_600x1024</item>
+        <item>@string/screen_recorder_size_720x1280</item>
+    </string-array>
+      <!-- Screen recorder bitrates -->
+    <string-array name="screen_recorder_bitrate_entries">
+        <item>@string/screen_recorder_bitrate_title_100000</item>
+        <item>@string/screen_recorder_bitrate_title_250000</item>
+        <item>@string/screen_recorder_bitrate_title_500000</item>
+        <item>@string/screen_recorder_bitrate_title_1000000</item>
+        <item>@string/screen_recorder_bitrate_title_2000000</item>
+        <item>@string/screen_recorder_bitrate_title_3000000</item>
+        <item>@string/screen_recorder_bitrate_title_4000000</item>
+        <item>@string/screen_recorder_bitrate_title_5000000</item>
+        <item>@string/screen_recorder_bitrate_title_10000000</item>
+        <item>@string/screen_recorder_bitrate_title_20000000</item>
+    </string-array>
+    <string-array name="screen_recorder_bitrate_values">
+        <item>@string/screen_recorder_bitrate_100000</item>
+        <item>@string/screen_recorder_bitrate_250000</item>
+        <item>@string/screen_recorder_bitrate_500000</item>
+        <item>@string/screen_recorder_bitrate_1000000</item>
+        <item>@string/screen_recorder_bitrate_2000000</item>
+        <item>@string/screen_recorder_bitrate_3000000</item>
+        <item>@string/screen_recorder_bitrate_4000000</item>
+        <item>@string/screen_recorder_bitrate_5000000</item>
+        <item>@string/screen_recorder_bitrate_10000000</item>
+        <item>@string/screen_recorder_bitrate_20000000</item>
+    </string-array>
+
     <!-- More frag-specific strings... eventually -->
 
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
 
-    <!-- Stuff for the info alertdialog -->
+    <!-- Stuff for the app info dialog fragment -->
     <string name="alertdiagtitle">Changelog</string>
     <string name="setpositive">OK</string>
     <string name="setnegative">Credits</string>

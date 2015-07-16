@@ -70,7 +70,7 @@ public class TinkerActivity extends AppCompatActivity {
     public static final String EXTRA_START_FRAGMENT = "com.android.purenexussettings.tinkerings.EXTRA_START_FRAGMENT";
     public static final int REQUEST_CREATE_SHORTCUT = 3;
     // this allows first # entries in stringarray to be skipped from navdrawer/widget
-    public static int FRAG_ARRAY_START = 9;
+    public static int FRAG_ARRAY_START = 10;
 
     public static final String KEY_LOCK_CLOCK_PACKAGE_NAME = "com.cyanogenmod.lockclock";
 
@@ -345,6 +345,13 @@ public class TinkerActivity extends AppCompatActivity {
         }
     }
 
+    private boolean checkPosition(int position) {
+        // list out positions that should skip stack clearing
+        // editprop apppicker qstile navbar navbardimen networktraffic
+
+        return position == 2 || position == 3 || position == 4 || position == 6 || position == 7 || position == 8 || position == 9;
+    }
+
     /* Displaying fragment view for selected nav drawer list item */
     private void displayView(int position) {
         // before anything else - check to see if position matches intent-launching "frags"
@@ -359,7 +366,7 @@ public class TinkerActivity extends AppCompatActivity {
 
         // list out positions that should skip stack clearing
         // editprop apppicker qstile navbar navbardimen
-        boolean mKeepStack = position == 2 || position == 3 || position == 4 || position == 6 || position == 7 || position == 8;
+        boolean mKeepStack = checkPosition(position);
 
         // update the main content by replacing fragments
         Fragment frags = null;
@@ -568,7 +575,7 @@ public class TinkerActivity extends AppCompatActivity {
     public void onBackPressed() {
         // list out positions that were flagged as stack keeping and not included in backstack
         // editprop apppicker qstile navbar navbardimen
-        boolean mKeepStack = mItemPosition == 2 || mItemPosition == 3 || mItemPosition == 4 || mItemPosition == 6 || mItemPosition == 7 || mItemPosition == 8;
+        boolean mKeepStack = checkPosition(mItemPosition);
 
         if (!fullyClosed) {
             // backpress closes drawer if open
