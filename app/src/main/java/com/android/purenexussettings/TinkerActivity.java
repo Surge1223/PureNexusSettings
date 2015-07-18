@@ -321,7 +321,7 @@ public class TinkerActivity extends AppCompatActivity {
                 mIgnore = true;
             } else {
                 //check for external app launching navdrawer items
-                if ( navMenuTitles[position].equals("App Ops") ) {
+                if ( navMenuTitles[position].equals("App ops") ) {
                     mIgnore = true;
                     launchAppOps();
                 }

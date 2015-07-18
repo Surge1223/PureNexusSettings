@@ -31,6 +31,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@drawable/ic_add"
+        app:backgroundTint="@color/fab_color"
         app:rippleColor="@color/fab_ripple"
         app:borderWidth="0dp"
         app:elevation="5dp"

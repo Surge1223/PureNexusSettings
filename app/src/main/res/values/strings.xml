@@ -205,7 +205,7 @@
     <string name="picker_summary">Not set</string>
 
     <!-- About Frag strings -->
-    <string name="pushbullet_data">https://plus.google.com/communities/103055954354785266764</string>
+    <string name="pushbullet_data">https://www.pushbullet.com/channel?tag=purenexus</string>
     <string name="gplus_data">https://plus.google.com/communities/103055954354785266764</string>
     <string name="twit_data">https://twitter.com/BeansTown106</string>
     <string name="payp_data">http://forum.xda-developers.com/donatetome.php?u=4395895</string>

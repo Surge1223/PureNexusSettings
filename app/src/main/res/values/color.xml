@@ -32,6 +32,8 @@
     <color name="fab_ripple">#ffb3e5fc</color>
     <color name="transcol">#00000000</color>
     <color name="cardview_pref_title">#ffffffff</color>
+    <color name="buildprop_desc_color">#ff0288d1</color>
+    <color name="fab_color">#ff03a9f4</color>
     <!-- If one wanted... they could alter the checkered alpha colors with the below -->
     <color name="alphawhite">#ffffffff</color>
     <color name="alphagray">#ffcbcbcb</color>
