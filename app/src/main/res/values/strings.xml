@@ -180,6 +180,10 @@
         <item>null</item>
     </string-array>
 
+    <!-- Switch On/Off  -->
+    <string name="switch_on_text">On</string>
+    <string name="switch_off_text">Off</string>
+
     <!-- Alpha string for sliding tab -->
     <string name="tab_indicator_alpha">0x26</string>
 
@@ -550,7 +554,7 @@
     <string name="navigation_bar_arrow_keys_summary">Display left and right cursor buttons while typing. Overrides IME switcher.</string>
     <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
     <string name="double_tap_sleep_nav_bar_summary">Double tap on the navigation bar to put the device to sleep</string>
-    <string name="navbar_enable_bar">Enable</string>
+    <string name="navbar_disabled_notice">To show navigation bar on screen, enable Navigation bar.</string>
     <string name="navbar_dimen_title">Dimensions</string>
     <string name="navbar_dimensions_reset_message">Reset all dimensions entries to default?</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>

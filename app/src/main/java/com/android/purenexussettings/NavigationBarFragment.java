@@ -27,10 +27,19 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class NavigationBarFragment extends PreferenceFragment implements OnPreferenceChangeListener {
+import com.android.purenexussettings.preferences.BaseSystemSettingSwitchBar;
+import com.android.purenexussettings.preferences.BaseSystemSettingSwitchBar.SwitchBarChangeCallback;
+import com.android.purenexussettings.preferences.SwitchBar;
+
+public class NavigationBarFragment extends PreferenceFragment implements SwitchBarChangeCallback, OnPreferenceChangeListener {
     private static final String NAVIGATION_BAR = "navigation_bar_edit";
     private static final String NAVIGATION_BAR_DIMEN = "navigation_bar_dimen";
+    private static final String NAVIGATION_BAR_SHOW = "navigation_bar_show";
+
     // kill-app long press back
     private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
     // Navigation bar left
@@ -47,10 +56,17 @@ public class NavigationBarFragment extends PreferenceFragment implements OnPrefe
 
     private ContentResolver resolver;
 
+    private BaseSystemSettingSwitchBar mEnabledSwitch;
+
+    private SwitchBar mSwitchBar;
+    private ViewGroup mPrefsContainer;
+    private View mDisabledText;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.navbar_fragment);
+        addPreferencesFromResource(R.xml.navbar_fragment_prefs);
 
         resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
@@ -83,12 +99,41 @@ public class NavigationBarFragment extends PreferenceFragment implements OnPrefe
 
     }
 
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.navbar_fragment, container, false);
+        mSwitchBar = (SwitchBar) v.findViewById(R.id.switch_bar);
+        mPrefsContainer = (ViewGroup) v.findViewById(R.id.prefs_container);
+        mDisabledText = v.findViewById(R.id.disabled_text);
+
+        View prefs = super.onCreateView(inflater, mPrefsContainer, savedInstanceState);
+
+        if (prefs != null) {
+            mPrefsContainer.addView(prefs);
+        }
+
+        return v;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        final TinkerActivity activity = (TinkerActivity) getActivity();
+        mEnabledSwitch = new BaseSystemSettingSwitchBar(activity, mSwitchBar, NAVIGATION_BAR_SHOW, true, this);
+    }
+
     public NavigationBarFragment() {
     }
 
     @Override
     public void onResume() {
         super.onResume();
+
+        final TinkerActivity activity = (TinkerActivity) getActivity();
+        if (mEnabledSwitch != null) {
+            mEnabledSwitch.resume(activity);
+        }
+
     }
 
     @Override
@@ -101,6 +146,41 @@ public class NavigationBarFragment extends PreferenceFragment implements OnPrefe
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (mEnabledSwitch != null) {
+            mEnabledSwitch.pause();
+        }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (mEnabledSwitch != null) {
+            mEnabledSwitch.teardownSwitchBar();
+        }
+    }
+
+    private boolean getNavBarState() {
+        return Settings.System.getInt(getActivity().getContentResolver(), NAVIGATION_BAR_SHOW, 1) != 0;
+    }
+
+    private void setNavBarState(int val) {
+        Settings.System.putInt(getActivity().getContentResolver(), NAVIGATION_BAR_SHOW, val);
+    }
+
+    private void updateEnabledState() {
+        mPrefsContainer.setVisibility(getNavBarState() ? View.VISIBLE : View.GONE);
+        mDisabledText.setVisibility(getNavBarState() ? View.GONE : View.VISIBLE);
+    }
+
+    @Override
+    public void onEnablerChanged(boolean isEnabled) {
+        setNavBarState(getNavBarState() ? 1 : 0);
+        updateEnabledState();
     }
 
     @Override

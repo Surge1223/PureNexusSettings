@@ -48,4 +48,7 @@
     <color name="userpanel_default6">#ff37474f</color>
 
     <color name="qs_tile_tint_color">#ff009587</color>
+
+    <color name="switchbar_background_color">@color/material_blue_grey_950</color>
+    <color name="switch_accent_color">#ff03a9f4</color>
 </resources>

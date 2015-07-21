@@ -42,4 +42,7 @@
     <dimen name="qs_tile_max_padding">10dp</dimen>
     <dimen name="qs_tile_dragged_z">10dp</dimen>
 
+    <!-- SwitchBar margin start / end -->
+    <dimen name="switchbar_margin_start">72dp</dimen>
+    <dimen name="switchbar_margin_end">16dp</dimen>
 </resources>

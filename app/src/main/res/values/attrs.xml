@@ -31,4 +31,8 @@
         <attr name="alphaText" format="boolean" />
         <attr name="colorgroupname" format="string" />
     </declare-styleable>
+
+    <attr name="switchBarMarginStart" format="dimension" />
+    <attr name="switchBarMarginEnd" format="dimension" />
+
 </resources>
