@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/col_accnt"
+        android:textColor="@color/navdrawer_cat_text"
         android:singleLine="true"
         android:ellipsize="marquee"
         android:gravity="center"
@@ -44,8 +44,7 @@
             android:layout_width="25dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginStart="10dp"
             android:contentDescription="@string/desc_list_item_icon"
             android:src="@drawable/ic_launcher"
             android:layout_centerVertical="true" />
@@ -62,8 +61,7 @@
             android:ellipsize="marquee"
             android:gravity="center_vertical"
             android:paddingStart="10dp"
-            android:paddingEnd="40dp"
-            android:paddingTop="5dp"/>
+            android:paddingEnd="10dp" />
 
     </RelativeLayout>
 </LinearLayout>
