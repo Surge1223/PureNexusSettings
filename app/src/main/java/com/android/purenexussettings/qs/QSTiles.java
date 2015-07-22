@@ -126,7 +126,7 @@ public class QSTiles extends Fragment implements DraggableGridView.OnRearrangeLi
     private void updateAddDeleteState() {
         int activeTiles = mDraggableGridView.getChildCount() - (mDraggingActive ? 2 : 1);
         boolean limitReached = activeTiles >= QSUtils.getAvailableTiles(getActivity()).size();
-        int iconResId = mDraggingActive ? R.drawable.ic_menu_delete : R.drawable.ic_menu_add_dark;
+        int iconResId = mDraggingActive ? R.drawable.ic_menu_delete : R.drawable.ic_menu_add_qs;
         int titleResId = mDraggingActive ? R.string.qs_action_delete : limitReached ? R.string.qs_action_no_more_tiles : R.string.qs_action_add;
 
         TextView title = (TextView) mAddDeleteTile.findViewById(android.R.id.title);

@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<resources>
+<resources xmlns:xliff="http://schemas.android.com/apk/res/android">
     <string name="app_name">PureNexus</string>
     <!-- For the toolbar menu... perhaps more will be added... or removed -->
     <string name="action_settings">Settings</string>
@@ -230,11 +230,11 @@
     <string name="devonte_sum">Coder/tweaker</string>
     <string name="dhack">Dhacker29</string>
     <string name="dhack_sum">Gapps Base</string>
-    <string name="daveya">DaveyAnnihalation</string>
+    <string name="daveya">DaveyAnnihilation</string>
     <string name="wally">Wally3614</string>
     <string name="gfx_sum">Graphics/icons</string>
     <string name="surge">Surge1223</string>
-    <string name="bajasur">Bajasur83</string>
+    <string name="bajasur">Bajasur</string>
     <string name="tweak_sum">Misc Tweaks</string>
 
     <!-- BuildProp edit strings -->
@@ -677,7 +677,42 @@
     </string-array>
 
     <!-- HeadsUp fragment strings -->
-
+    <string name="category_heads_up">Heads up notifications</string>
+    <string name="add_heads_up_package">Add app</string>
+    <string name="add_heads_up_dnd_summary">Don\'t show heads up in these applications</string>
+    <string name="add_heads_up_blacklist_summary">Don\'t show heads up from these applications</string>
+    <string name="heads_up_dnd_title">Do not disturb</string>
+    <string name="heads_up_blacklist_title">Blacklist</string>
+    <string name="heads_up_disabled_notice">To allow applications to display interactive notifications in a pop-up window on your screen, enable Heads up.</string>
+    <string name="dialog_delete_title">Delete</string>
+    <string name="dialog_delete_message">Remove selected item?</string>
+    <string name="choose_app">Choose app</string>
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Time out</string>
+    <string name="heads_up_time_out_summary">Notification will show for <xliff:g id="number">%d</xliff:g> seconds</string>
+    <string name="heads_up_time_out_never_summary">Notification will show until it is dismissed</string>
+    <string name="heads_up_time_out_2sec">2 seconds</string>
+    <string name="heads_up_time_out_4sec">4 seconds</string>
+    <string name="heads_up_time_out_6sec">6 seconds</string>
+    <string name="heads_up_time_out_8sec">8 seconds</string>
+    <string name="heads_up_time_out_10sec">10 seconds</string>
+    <string name="heads_up_time_out_never">Never</string>
+    <string-array name="heads_up_time_out_entries">
+        <item>@string/heads_up_time_out_never</item>
+        <item>@string/heads_up_time_out_2sec</item>
+        <item>@string/heads_up_time_out_4sec</item>
+        <item>@string/heads_up_time_out_6sec</item>
+        <item>@string/heads_up_time_out_8sec</item>
+        <item>@string/heads_up_time_out_10sec</item>
+    </string-array>
+    <string-array name="heads_up_time_out_values" translatable="false">
+        <item>0</item>
+        <item>2000</item>
+        <item>4000</item>
+        <item>6000</item>
+        <item>8000</item>
+        <item>10000</item>
+    </string-array>
 
     <!-- ScreenRecorder fragment strings -->
     <string name="screen_recorder_title">Screen recorder</string>
@@ -781,6 +816,7 @@
 &#160; &#8226; margaritov/slim rom for the color picker base<br />
 &#160; &#8226; Beans for the rom and an excuse to tinker<br />
 &#160; &#8226; Cheekybastards for living up to their namesake<br />
+&#160; &#8226; DaveyAnnihilation for all the help with setting things up theme-friendly and general aesthetics<br />
 &#160; &#8226; Gunthermic, for testing and great ideas with the colorpicker<br />
 &#160; &#8226; All contributors to stackoverflow or various other java/android app making resources<br />
 &#160; &#8226; Those not mentioned but should have been<br />]]></string>
